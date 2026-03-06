@@ -1,3 +1,35 @@
-* {
-  font-family: "Courier New", Courier, monospace;
-}
+
+        :root {
+            /* Paleta Customizada: Moderna e Neutra */
+            --bs-primary: #6366f1;    /* Indigo Moderno */
+            --bs-success: #10b981;    /* Esmeralda */
+            --bs-info: #3b82f6;       /* Azul Royal */
+            --bs-warning: #f59e0b;    /* Âmbar */
+            --bs-danger: #ef4444;     /* Rose Red */
+            --bs-dark: #1f2937;       /* Cinza Antracite (Fundo Navbar) */
+            --bs-body-bg: #f9fafb;    /* Cinza quase branco para o fundo */
+            --bs-body-color: #374151; /* Texto principal */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Ajuste para conteúdo ocupar espaço restante */
+        main {
+            flex: 1 0 auto;
+            padding-top: 80px; /* Altura da navbar fixa */
+        }
+
+        .navbar {
+            background-color: var(--bs-dark) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Botões com estilo mais "flat" e moderno */
+        .btn { border-radius: 8px; font-weight: 500; transition: all 0.3s; }
+        .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }

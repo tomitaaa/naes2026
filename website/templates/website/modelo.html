@@ -1,13 +1,129 @@
 {% load static %}
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/estilo.css' %}" />
-  </head>
-  <body>
-    <h3>Sistema de Campeonato</h3>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Minimalista - Gemini</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/estilo.css" %}">
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">BRAND</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Projetos</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="#">Web Design</a></li>
+                            <li><a class="dropdown-item" href="#">Desenvolvimento</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Consultoria</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2">
+                    <div id="auth-logged-out">
+                        <button class="btn btn-outline-light btn-sm me-2">Login</button>
+                        <button class="btn btn-primary btn-sm">Cadastrar</button>
+                    </div>
+
+                    <div id="auth-logged-in" class="dropdown d-none">
+                        <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=User&background=6366f1&color=fff" alt="mdo" width="32" height="32" class="rounded-circle me-2">
+                            <span>Minha Conta</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow mt-2">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mb-5">
+        <div class="row py-5">
+            <div class="col-12 text-center mb-5">
+                <h1 class="display-4 fw-bold text-dark">Design System Minimalista</h1>
+                <p class="lead">Uma paleta moderna aplicada a componentes nativos do Bootstrap.</p>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <h3 class="h5 mb-3">Botões & Ações</h3>
+                <div class="d-flex flex-wrap gap-2">
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-success">Success</button>
+                    <button class="btn btn-info text-white">Info</button>
+                    <button class="btn btn-warning text-white">Warning</button>
+                    <button class="btn btn-danger">Danger</button>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <h3 class="h5 mb-3">Alertas</h3>
+                <div class="alert alert-info border-0 shadow-sm" role="alert">
+                    Este é um alerta informativo com cores suaves.
+                </div>
+                <div class="alert alert-success border-0 shadow-sm" role="alert">
+                    Operação realizada com sucesso!
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card border-0 shadow-sm p-4 bg-white">
+                    <h3 class="h5">Estrutura de Conteúdo</h3>
+                    <p>O conteúdo aqui ocupa o espaço central de forma responsiva. Use a classe <code>.shadow-sm</code> e <code>.border-0</code> para manter o visual moderno.</p>
+                    <div class="row g-3">
+                        <div class="col-md-4"><div class="p-3 border rounded bg-light">Card Item 1</div></div>
+                        <div class="col-md-4"><div class="p-3 border rounded bg-light">Card Item 2</div></div>
+                        <div class="col-md-4"><div class="p-3 border rounded bg-light">Card Item 3</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-top py-4">
+        <div class="container text-center">
+            <p class="text-muted mb-0 small">© 2026 Sua Empresa. Feito com foco em simplicidade e performance.</p>
+            <div class="mt-2">
+                <a href="#" class="text-primary text-decoration-none mx-2 small">Privacidade</a>
+                <a href="#" class="text-primary text-decoration-none mx-2 small">Termos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Exemplo simples de toggle de login para demonstração
+            // No seu sistema real, isso será controlado pela sessão/backend
+            window.toggleAuth = function() {
+                $('#auth-logged-out').toggleClass('d-none');
+                $('#auth-logged-in').toggleClass('d-none');
+            };
+        });
+    </script>
+</body>
 </html>
